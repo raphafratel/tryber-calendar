@@ -110,3 +110,26 @@ const handleAssignTaskToDay = (event) => {
 for (let index = 0; index < allDays.length; index += 1) {
   allDays[index].addEventListener('click', handleAssignTaskToDay);
 }
+
+const addNewTask = () => {
+  const taskList = document.querySelector('#task-list');
+  const newTaskText = document.querySelector('#task-input');
+  if (!newTaskText.value) {
+    window.alert('insira um texto para a tarefa');
+  } else {
+    const li = document.createElement('li');
+    li.innerText = newTaskText.value;
+    taskList.appendChild(li);
+  }
+};
+
+const btnAddNewTask = document.querySelector('#btn-add');
+btnAddNewTask.addEventListener('click', addNewTask);
+
+const taskInput = document.querySelector('#task-input');
+
+taskInput.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    addNewTask(); // chama a mesma função do botão
+  }
+});
