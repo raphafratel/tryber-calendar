@@ -49,10 +49,10 @@ const btnHoliday = document.getElementById('btn-holiday');
 btnHoliday.addEventListener('click', () => {
   const holidays = document.querySelectorAll('.holiday');
   for (let index = 0; index < holidays.length; index += 1) {
-    if (holidays[index].style.backgroundColor === 'red') {
+    if (holidays[index].style.backgroundColor === 'lightgreen') {
       holidays[index].style.backgroundColor = 'rgb(238, 238, 238)';
     } else {
-      holidays[index].style.backgroundColor = 'red';
+      holidays[index].style.backgroundColor = 'lightgreen';
     }
   }
 });
@@ -68,10 +68,10 @@ for (let i = 0; i < fridays.length; i += 1) {
 
 btnFriday.addEventListener('click', () => {
   for (let index = 0; index < fridays.length; index += 1) {
-    if (fridays[index].innerText === 'red') {
+    if (fridays[index].innerText === 'Sextou 🎉') {
       fridays[index].innerText = backupFridays[index];
     } else {
-      fridays[index].innerText = 'red';
+      fridays[index].innerText = 'Sextou 🎉';
     }
   }
 });
