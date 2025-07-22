@@ -75,3 +75,15 @@ btnFriday.addEventListener('click', () => {
     }
   }
 });
+
+const allDays = document.querySelectorAll('.day');
+
+for (let index = 0; index < allDays.length; index += 1) {
+  allDays[index].addEventListener('mouseover', () => {
+    allDays[index].style.fontSize = '30px';
+  });
+
+  allDays[index].addEventListener('mouseout', () => {
+    allDays[index].style.fontSize = '';
+  });
+}
