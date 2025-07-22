@@ -87,3 +87,26 @@ for (let index = 0; index < allDays.length; index += 1) {
     allDays[index].style.fontSize = '';
   });
 }
+/* clique seleciona tarefa */
+const handleSelectTask = (event) => {
+  const selectedTask = document.querySelector('.selected');
+  event.target.classList.add('selected');
+  selectedTask.classList.remove('selected');
+};
+const allTasks = document.querySelectorAll('.task');
+for (let index = 0; index < allTasks.length; index += 1) {
+  allTasks[index].addEventListener('click', handleSelectTask);
+}
+
+/* Atribui a tarefa ao dia */
+const handleAssignTaskToDay = (event) => {
+  const selectedTask = document.querySelector('.selected');
+  if (event.target.style.color === selectedTask.style.backgroundColor) {
+    event.target.style.color = 'rgb(119,119,119)';
+  } else {
+    event.target.style.color = selectedTask.style.backgroundColor;
+  }
+};
+for (let index = 0; index < allDays.length; index += 1) {
+  allDays[index].addEventListener('click', handleAssignTaskToDay);
+}
