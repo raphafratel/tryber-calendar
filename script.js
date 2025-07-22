@@ -33,3 +33,19 @@ for (let index = 0; index < decemberDaysList.length; index += 1) {
     li.classList.add('friday');
   }
 }
+
+let holidays = document.querySelectorAll('.holiday');
+const btnHoliday = document.getElementById('btn-holiday');
+
+btnHoliday.addEventListener('click', () => {
+for (let index = 0; index < holidays.length; index += 1) {
+  if (holidays[index].style.backgroundColor === 'rgb(238,238,238)'){
+    holidays[index].style.backgroundColor = 'red';
+  } else {
+    holidays[index].style.backgroundColor = 'rgb(238,238,238)';
+
+  }
+}
+  }
+
+)
