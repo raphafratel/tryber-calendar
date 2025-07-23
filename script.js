@@ -90,9 +90,17 @@ for (let index = 0; index < allDays.length; index += 1) {
 /* clique seleciona tarefa */
 const handleSelectTask = (event) => {
   const selectedTask = document.querySelector('.selected');
-  event.target.classList.add('selected');
-  selectedTask.classList.remove('selected');
+
+  if (event.target.classList.contains('selected')) {
+    // Se já está selecionado, remove
+    event.target.classList.remove('selected');
+  } else {
+    // Se outra estiver selecionada, remove
+    if (selectedTask) selectedTask.classList.remove('selected');
+    event.target.classList.add('selected');
+  }
 };
+
 const allTasks = document.querySelectorAll('.task');
 for (let index = 0; index < allTasks.length; index += 1) {
   allTasks[index].addEventListener('click', handleSelectTask);
