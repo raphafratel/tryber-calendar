@@ -1,5 +1,5 @@
 # 📅 Tryber Calendar
-![Imagem do projeto](assets/screen.git)
+![Imagem do projeto](images/gif-tryber-calendar@800px.gif)
 
 Este é um projeto **acadêmico** desenvolvido como parte dos estudos de JavaScript e manipulação do DOM. Ele simula um calendário interativo do mês de dezembro, com funcionalidades como destacar feriados, modificar sextas-feiras, interações com tarefas e efeitos visuais nos dias.
 
