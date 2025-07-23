@@ -30,7 +30,6 @@ Para executar o projeto em seu ambiente local, siga os passos abaixo:
    git clone https://github.com/raphafratel/tryber-calendar.git
    cd tryber-calendar
    npm install
-  `
 
 ## 📄 Licença
 Projeto acadêmico sem fins comerciais. Livre para estudo e modificação com créditos.
